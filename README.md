@@ -10,15 +10,15 @@ mkdir -p /prometheus/configuration
 mkdir -p /prometheus/data
 chown 65534:65534 /prometheus/data
 ```
-сюда же мы клонируем наш docker compose файл
+Сюда же мы клонируем наш docker compose файл
 
 ```bash
 cd /prometheus
 git clone git@github.com:WhitePavel/prometheus_docker.git
 ```
 ---
-#### здесь мы создаём конфигурационный файл prometheus для получения метрик
-изначально метрики идут только с хоста, если нужно выбрать другие отредактируйте файл как вам нужно, я оставил подключение к хосту
+#### Здесь мы создаём конфигурационный файл prometheus для получения метрик
+Изначально метрики идут только с хоста, если нужно выбрать другие отредактируйте файл как вам нужно, я оставил подключение к хосту
 ⬇️⬇️⬇️
 ``` bash
 cat <<EOF> /prometheus/configuration/prometheus.yml
